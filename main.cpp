@@ -8,55 +8,39 @@ using namespace std;
 using namespace contact;
 int main()
 {
-    phoneBook rec;
-    int choice;
+  phonebook rec;
+  int choice;
 
     while(1)
     {
         char nm[20];
-        cout<<"\n*****Phone Book -Developed by CPPSECRETS *****\n";
+        cout<<"\n*****Yusreen's Phone Book *****\n";
         cout<<"1) Add New Record\n";
-        cout<<"2) Display All Records\n";
-        cout<<"3) Search Telephone No.\n";
-        cout<<"4) Search Person Name\n";
-        cout<<"5) Update Telephone No.\n";
-        cout<<"6) Delete a record \n";
-        cout<<"7) Exit\n";
-        cout<<"Choose your choice : ";
+        cout<<"2) Display all the Records\n";
+        cout <<"3) Search a contact by name \n";
+        cout<<"4) Exit\n";
+
+      
         cin>>choice;
         switch(choice)
         {
-            case 1 : rec.newrecord();
+            case 1 : rec.newRecord();
                  break;
 
-            case 2 :  rec.display();
-              break;
+            case 2: rec.display();
+                  break;
 
-            case 3 :rec.searchpname();
-                    break;
-                    
-
-            case 4 :
-            cout<<"\n\nEnter Name : ";
-            cin>>nm;
+            case 3:
+            cout <<"\n Enter the name: ";
+            cin >> nm;
             rec.display(nm);
             break;
 
-            case 5 :rec.updatetelno();
-                 break;
+            case 4:
+            exit(1);
 
-           case 6:   rec.deleterec();
-                    break;
-
-           case 7:  exit(1);
-
-           default:
-                cout<<"Invalid Option!!"<<endl;
-
+             default:
+             cout<<"Invalid Option!"<<endl;
         }
-
     }
-
-
-return 0;
 }
